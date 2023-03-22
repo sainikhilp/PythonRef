@@ -1,0 +1,36 @@
+
+class Line():
+
+    #Constructor
+    def __init__(self,cord1,cord2):
+        self.cord1=cord1
+        self.cord2=cord2
+
+    #distance calculation
+    def distance(self):
+        x1,y1=self.cord1
+        x2,y2=self.cord2
+        return (((y2-y1)**2) + ((x2-x1)**2))**0.5
+
+    #slope calculation
+    def slope(self):
+        x1,y1=self.cord1
+        x2,y2=self.cord2
+        if x1==x2:
+            return 'Infinite slope'
+        else:
+            return (y2-y1)/(x2-x1)
+
+
+cord1=(1,2)
+cord2=(3,4)
+
+l1=Line(cord1,cord2)
+distance=l1.distance()
+slope=l1.slope()
+
+print(f'The distance is {distance:.2f}')
+print(f'The slope is {slope:.2f}')
+
+
+
